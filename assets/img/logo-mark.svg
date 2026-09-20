@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" role="img" aria-label="ASAP MedCare">
+  <title>ASAP MedCare</title>
+  <defs><mask id="cut">
+    <rect width="200" height="150" fill="#fff"/>
+    <rect x="26" y="96" width="44" height="10" fill="#000"/>
+    <rect x="130" y="96" width="44" height="10" fill="#000"/>
+  </mask></defs>
+  <g mask="url(#cut)" fill="#0F2A47">
+    <path d="M100 4 L192 150 L144 150 L100 62 L56 150 L8 150 Z"/>
+    <path d="M100 76 L113 128 L87 128 Z"/>
+  </g>
+  <path fill="#14B8A6" d="M0 150 L100 76 L200 150 L156 150 L100 106 L44 150 Z"/>
+</svg>

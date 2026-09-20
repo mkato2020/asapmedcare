@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# Build artifact — regenerate with the zip command in README
+asapmedcare-site.zip
+
+# Local tooling
+.claude/

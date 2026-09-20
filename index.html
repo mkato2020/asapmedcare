@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASAP MedCare Uganda Limited — Pharmaceutical &amp; Medical Device Distribution</title>
+<meta name="description" content="ASAP MedCare distributes differentiated pharmaceuticals, medical devices and consumer healthcare products across Uganda and East Africa — sourced against real clinical need.">
+<meta name="theme-color" content="#091A2C">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="ASAP MedCare Uganda Limited">
+<meta property="og:description" content="Closing the gap between quality medicine and the patients who need it.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ SPRITE: bespoke line icons ============ -->
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <g id="i-gastro">
+      <path d="M17 9v7c0 6-7 6-7 14 0 8 6 14 14 14 9 0 15-6 15-15 0-7-4-11-9-13"/>
+      <path d="M13 9h8"/>
+      <circle cx="25" cy="29" r="6"/>
+      <path d="M31 26.5l4-1.5M31 31.5l4 1.5M19 29h-4"/>
+    </g>
+    <g id="i-ncd">
+      <path d="M24 40S11 32 11 22.5A7.5 7.5 0 0 1 24 17a7.5 7.5 0 0 1 13 5.5C37 32 24 40 24 40z"/>
+      <path d="M13 26h6l3-5 4 10 3-5h6"/>
+    </g>
+    <g id="i-women">
+      <circle cx="24" cy="17" r="7"/>
+      <path d="M24 24v16M18 31h12"/>
+      <path d="M9 38c0-8 5-13 10-15M39 38c0-8-5-13-10-15"/>
+    </g>
+    <g id="i-ipc">
+      <path d="M24 8l14 5v11c0 9-6 15-14 18-8-3-14-9-14-18V13z"/>
+      <path d="M18 24l4.5 4.5L31 20"/>
+    </g>
+    <g id="i-neonatal">
+      <path d="M10 34c0-9 6-16 14-16s14 7 14 16"/>
+      <path d="M7 34h34"/>
+      <circle cx="24" cy="27" r="5"/>
+      <path d="M24 8v4M14 11l2 3M34 11l-2 3"/>
+    </g>
+    <g id="i-consumer">
+      <rect x="9" y="15" width="30" height="24" rx="6"/>
+      <path d="M18 15v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3"/>
+      <path d="M24 22v10M19 27h10"/>
+    </g>
+    <g id="i-source">
+      <path d="M8 34V18l12-8 12 8"/>
+      <path d="M8 34h32V22l-8-5"/>
+      <path d="M16 34v-8h8v8"/>
+      <path d="M36 30l4 4-4 4"/>
+    </g>
+    <g id="i-register">
+      <rect x="12" y="7" width="24" height="34" rx="4"/>
+      <path d="M18 16h12M18 23h12M18 30h7"/>
+      <circle cx="33" cy="33" r="7" fill="none"/>
+      <path d="M30 33l2.2 2.2L36.5 31"/>
+    </g>
+    <g id="i-distribute">
+      <circle cx="24" cy="24" r="15"/>
+      <path d="M24 9v30M9 24h30"/>
+      <path d="M24 9c5 6 5 24 0 30M24 9c-5 6-5 24 0 30"/>
+    </g>
+    <g id="i-cold">
+      <rect x="18" y="6" width="12" height="26" rx="6"/>
+      <circle cx="24" cy="36" r="7"/>
+      <path d="M24 20v12"/>
+      <path d="M36 14h6M36 22h6M39 11l3 3-3 3"/>
+    </g>
+    <g id="i-trace">
+      <circle cx="11" cy="24" r="5"/><circle cx="37" cy="12" r="5"/><circle cx="37" cy="36" r="5"/>
+      <path d="M15.5 21.8 32.5 14M15.5 26.2 32.5 34"/>
+    </g>
+    <g id="i-pv">
+      <rect x="10" y="8" width="24" height="32" rx="4"/>
+      <path d="M16 17h12M16 24h12M16 31h7"/>
+      <circle cx="37" cy="33" r="8"/>
+      <path d="M37 29v4M37 37h.01"/>
+    </g>
+    <g id="i-hospital">
+      <path d="M8 42V16l16-8 16 8v26"/>
+      <path d="M4 42h40"/>
+      <path d="M24 20v10M19 25h10"/>
+      <path d="M18 42v-8h12v8"/>
+    </g>
+    <g id="i-doc">
+      <path d="M12 6h16l8 8v28H12z"/>
+      <path d="M28 6v8h8"/>
+      <path d="M18 24h12M18 31h12"/>
+    </g>
+    <g id="i-store">
+      <rect x="8" y="16" width="32" height="24" rx="4"/>
+      <path d="M8 24h32"/>
+      <path d="M16 16V9a8 8 0 0 1 16 0v7"/>
+      <path d="M20 32h8"/>
+    </g>
+    <g id="i-arrow">
+      <path d="M6 24h30M28 16l8 8-8 8"/>
+    </g>
+  </defs>
+</svg>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="top" data-header>
+  <div class="shell header__inner">
+    <a class="brand" href="#top" aria-label="ASAP MedCare — home">
+      <svg class="brand__mark" viewBox="0 0 200 150" aria-hidden="true" focusable="false">
+        <defs><mask id="markHeader">
+          <rect width="200" height="150" fill="#fff"/>
+          <rect x="26" y="96" width="44" height="10" fill="#000"/>
+          <rect x="130" y="96" width="44" height="10" fill="#000"/>
+        </mask></defs>
+        <g mask="url(#markHeader)">
+          <path class="m-navy" d="M100 4 L192 150 L144 150 L100 62 L56 150 L8 150 Z"/>
+          <path class="m-navy" d="M100 76 L113 128 L87 128 Z"/>
+        </g>
+        <path class="m-teal" d="M0 150 L100 76 L200 150 L156 150 L100 106 L44 150 Z"/>
+      </svg>
+      <span class="brand__rule" aria-hidden="true"></span>
+      <span class="brand__word">
+        <span class="brand__word-top">ASAP</span>
+        <span class="brand__word-bot">MedCare</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="#areas">Therapeutic Areas</a></li>
+        <li><a class="nav__link" href="#process">How We Work</a></li>
+        <li><a class="nav__link" href="#quality">Quality</a></li>
+        <li><a class="nav__link" href="#partners">Partners</a></li>
+        <li><a class="nav__link" href="#about">About</a></li>
+      </ul>
+      <a class="btn btn--primary nav__cta" href="#contact">Talk to Us</a>
+    </nav>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" data-nav-toggle>
+      <span class="nav-toggle__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="sr-only">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="shell hero__inner">
+    <div class="hero__copy">
+      <p class="eyebrow reveal">ASAP MedCare Uganda Limited</p>
+      <h1 class="hero__title reveal" data-delay="1">
+        Closing the gap between <em>quality medicine</em> and the patients who need it.
+      </h1>
+      <p class="hero__lede reveal" data-delay="2">
+        ASAP MedCare distributes differentiated pharmaceuticals, medical devices, and consumer
+        healthcare products across Uganda and East Africa — sourced against real clinical need,
+        not just what’s already on the shelf.
+      </p>
+      <div class="hero__actions reveal" data-delay="3">
+        <a class="btn btn--primary btn--lg" href="#contact">Talk to Us</a>
+        <a class="btn btn--ghost btn--lg" href="#areas">
+          Explore therapeutic areas
+          <svg class="btn__icon" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+
+      <dl class="proof reveal" data-delay="4">
+        <div class="proof__item">
+          <dt class="proof__value">2020</dt>
+          <dd class="proof__label">Founded, and building for the long term</dd>
+        </div>
+        <div class="proof__item">
+          <dt class="proof__value">Five</dt>
+          <dd class="proof__label">Therapeutic verticals under active development</dd>
+        </div>
+        <div class="proof__item">
+          <dt class="proof__value">Kampala</dt>
+          <dd class="proof__label">Uganda-based, with East African ambition</dd>
+        </div>
+      </dl>
+    </div>
+
+    <!-- Bespoke abstract clinical-supply composition -->
+    <div class="hero__visual reveal" data-delay="2">
+      <svg class="hero-art" viewBox="0 0 520 540" role="img" aria-labelledby="heroArtTitle">
+        <title id="heroArtTitle">An abstract composition: a regional supply network, a vital-signs trace, and sealed clinical supply.</title>
+        <defs>
+          <linearGradient id="gTeal" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#14B8A6"/><stop offset="1" stop-color="#0E8C7F"/>
+          </linearGradient>
+          <linearGradient id="gNavy" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#0F2A47"/><stop offset="1" stop-color="#091A2C"/>
+          </linearGradient>
+          <linearGradient id="gFade" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#14B8A6" stop-opacity="0"/>
+            <stop offset=".45" stop-color="#14B8A6" stop-opacity=".85"/>
+            <stop offset="1" stop-color="#0E8C7F"/>
+          </linearGradient>
+          <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="1.6" fill="#0F2A47" opacity=".16"/>
+          </pattern>
+        </defs>
+
+        <rect x="6" y="6" width="508" height="528" rx="34" fill="#F1EFE9"/>
+        <rect x="6" y="6" width="508" height="528" rx="34" fill="url(#dots)"/>
+
+        <!-- regional network -->
+        <g class="art-net" fill="none" stroke="#0F2A47" stroke-opacity=".28">
+          <circle cx="260" cy="196" r="150" stroke-dasharray="3 9"/>
+          <circle cx="260" cy="196" r="108"/>
+          <circle cx="260" cy="196" r="62" stroke-opacity=".5"/>
+        </g>
+        <g class="art-nodes">
+          <circle cx="260" cy="196" r="13" fill="url(#gTeal)"/>
+          <circle cx="260" cy="196" r="26" fill="none" stroke="#14B8A6" stroke-opacity=".45"/>
+          <circle class="node" cx="368" cy="196" r="7" fill="#0F2A47"/>
+          <circle class="node n2" cx="184" cy="288" r="7" fill="#0F2A47"/>
+          <circle class="node n3" cx="196" cy="106" r="7" fill="#0E8C7F"/>
+          <circle class="node n4" cx="340" cy="300" r="7" fill="#0E8C7F"/>
+          <circle class="node n5" cx="110" cy="196" r="5" fill="#0F2A47" opacity=".6"/>
+          <circle class="node n6" cx="390" cy="108" r="5" fill="#0F2A47" opacity=".6"/>
+        </g>
+
+        <!-- vitals trace -->
+        <path class="art-trace" d="M40 398 H88 l10-12 10 12 H150 l6-34 12 68 8-34 h28 l10-8 8 8 H330 l10-12 10 12 h120"
+              fill="none" stroke="url(#gFade)" stroke-width="4"
+              stroke-linecap="round" stroke-linejoin="round"/>
+
+        <!-- sealed supply cards -->
+        <g class="art-card">
+          <rect x="40" y="436" width="150" height="70" rx="16" fill="#FFFFFF" stroke="#0F2A47" stroke-opacity=".12"/>
+          <rect x="60" y="458" width="42" height="26" rx="7" fill="url(#gTeal)" opacity=".9"/>
+          <rect x="114" y="460" width="58" height="7" rx="3.5" fill="#0F2A47" opacity=".7"/>
+          <rect x="114" y="475" width="38" height="7" rx="3.5" fill="#0F2A47" opacity=".3"/>
+        </g>
+        <g class="art-card art-card--2">
+          <rect x="206" y="436" width="274" height="70" rx="16" fill="url(#gNavy)"/>
+          <path d="M240 471l9 9 17-19" fill="none" stroke="#14B8A6" stroke-width="4"
+                stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="286" y="458" width="124" height="8" rx="4" fill="#FAFAF7" opacity=".85"/>
+          <rect x="286" y="476" width="76" height="8" rx="4" fill="#FAFAF7" opacity=".35"/>
+        </g>
+
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THERAPEUTIC AREAS ============ -->
+<section class="section section--areas" id="areas">
+  <div class="shell">
+    <header class="section__head">
+      <p class="eyebrow reveal">Therapeutic Areas</p>
+      <h2 class="section__title reveal" data-delay="1">Six areas where supply still fails the clinic.</h2>
+      <p class="section__lede reveal" data-delay="2">
+        Every vertical we build starts with a gap a Ugandan clinician can describe — then the
+        product, the dossier and the distribution are assembled around it.
+      </p>
+    </header>
+
+    <ul class="areas" role="list">
+      <li class="area reveal">
+        <a class="area__link" href="#contact">
+          <span class="area__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><use href="#i-gastro"/></svg>
+          </span>
+          <span class="area__cat">Gastroenterology</span>
+          <span class="area__title">H. pylori &amp; GI Therapeutics</span>
+          <span class="area__note">Eradication regimens and acid-related care built for local resistance patterns.</span>
+          <span class="area__go" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><use href="#i-arrow"/></svg>
+          </span>
+        </a>
+      </li>
+      <li class="area reveal" data-delay="1">
+        <a class="area__link" href="#contact">
+          <span class="area__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><use href="#i-ncd"/></svg>
+          </span>
+          <span class="area__cat">Non-Communicable Disease</span>
+          <span class="area__title">Diabetes, Hypertension &amp; CKD</span>
+          <span class="area__note">Long-course therapy and monitoring for the fastest-growing burden we see.</span>
+          <span class="area__go" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><use href="#i-arrow"/></svg>
+          </span>
+        </a>
+      </li>
+      <li class="area reveal" data-delay="2">
+        <a class="area__link" href="#contact">
+          <span class="area__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><use href="#i-women"/></svg>
+          </span>
+          <span class="area__cat">Women’s Health</span>
+          <span class="area__title">Reproductive &amp; Maternal Care</span>
+          <span class="area__note">Products that hold their quality from the port to the district maternity ward.</span>
+          <span class="area__go" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><use href="#i-arrow"/></svg>
+          </span>
+        </a>
+      </li>
+      <li class="area reveal" data-delay="1">
+        <a class="area__link" href="#contact">
+          <span class="area__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><use href="#i-ipc"/></svg>
+          </span>
+          <span class="area__cat">Infection Prevention &amp; Control</span>
+          <span class="area__title">Hospital-Grade IPC</span>
+          <span class="area__note">Disinfection, antisepsis and barrier protection with the evidence attached.</span>
+          <span class="area__go" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><use href="#i-arrow"/></svg>
+          </span>
+        </a>
+      </li>
+      <li class="area reveal" data-delay="2">
+        <a class="area__link" href="#contact">
+          <span class="area__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><use href="#i-neonatal"/></svg>
+          </span>
+          <span class="area__cat">Neonatal Care</span>
+          <span class="area__title">Neonatology Essentials</span>
+          <span class="area__note">Small-volume, high-stakes supply for the first hours of life.</span>
+          <span class="area__go" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><use href="#i-arrow"/></svg>
+          </span>
+        </a>
+      </li>
+      <li class="area reveal" data-delay="3">
+        <a class="area__link" href="#contact">
+          <span class="area__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><use href="#i-consumer"/></svg>
+          </span>
+          <span class="area__cat">Consumer Healthcare</span>
+          <span class="area__title">Everyday Wellness</span>
+          <span class="area__note">Pharmacy-counter products people actually return for, priced to reach.</span>
+          <span class="area__go" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><use href="#i-arrow"/></svg>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ WHY / CAPABILITIES ============ -->
+<section class="section section--why">
+  <div class="shell">
+    <header class="section__head section__head--split">
+      <div>
+        <p class="eyebrow reveal">Why ASAP MedCare</p>
+        <h2 class="section__title reveal" data-delay="1">Distribution decisions made at the bedside, not the border.</h2>
+      </div>
+      <p class="section__lede reveal" data-delay="2">
+        We are a small, deliberate house. What we carry, we can defend — clinically,
+        commercially and in front of a regulator.
+      </p>
+    </header>
+
+    <div class="pillars">
+      <article class="pillar reveal">
+        <span class="pillar__num">01</span>
+        <h3 class="pillar__title">Built by clinicians, not just traders</h3>
+        <p class="pillar__copy">
+          Our product calls are made by people who have prescribed, dispensed and explained these
+          medicines — so the brief starts with the patient, not the margin.
+        </p>
+      </article>
+      <article class="pillar reveal" data-delay="1">
+        <span class="pillar__num">02</span>
+        <h3 class="pillar__title">Evidence before inventory</h3>
+        <p class="pillar__copy">
+          Dossiers, trial data and comparator analysis are reviewed before a purchase order exists.
+          If the evidence is thin, we pass — however good the terms.
+        </p>
+      </article>
+      <article class="pillar reveal" data-delay="2">
+        <span class="pillar__num">03</span>
+        <h3 class="pillar__title">Regulatory-first</h3>
+        <p class="pillar__copy">
+          National Drug Authority requirements shape the timeline from day one: registration,
+          labelling, storage and pharmacovigilance planned together, not retrofitted.
+        </p>
+      </article>
+      <article class="pillar reveal" data-delay="3">
+        <span class="pillar__num">04</span>
+        <h3 class="pillar__title">Regional ambition</h3>
+        <p class="pillar__copy">
+          Uganda is the proving ground. The structures we are building — compliance, cold chain,
+          detailing — are designed to carry a brand across East Africa.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW WE WORK ============ -->
+<section class="section section--process" id="process">
+  <div class="shell">
+    <header class="section__head">
+      <p class="eyebrow reveal">How We Work</p>
+      <h2 class="section__title reveal" data-delay="1">Source. Register. Distribute.</h2>
+      <p class="section__lede reveal" data-delay="2">
+        Three steps, run in sequence, with the same team accountable from the manufacturer’s
+        factory gate to the dispensing counter.
+      </p>
+    </header>
+
+    <ol class="steps" role="list">
+      <li class="step reveal">
+        <span class="step__index">Step 01</span>
+        <span class="step__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#i-source"/></svg></span>
+        <h3 class="step__title">Source</h3>
+        <p class="step__copy">
+          We partner directly with manufacturers — no broker layers — and audit quality systems,
+          GMP status and supply reliability before we commit to a market.
+        </p>
+      </li>
+      <li class="step reveal" data-delay="1">
+        <span class="step__index">Step 02</span>
+        <span class="step__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#i-register"/></svg></span>
+        <h3 class="step__title">Register</h3>
+        <p class="step__copy">
+          We prepare and carry the National Drug Authority dossier ourselves, holding the
+          registration, the import permits and the post-market obligations that follow it.
+        </p>
+      </li>
+      <li class="step reveal" data-delay="2">
+        <span class="step__index">Step 03</span>
+        <span class="step__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#i-distribute"/></svg></span>
+        <h3 class="step__title">Distribute</h3>
+        <p class="step__copy">
+          Stock reaches pharmacies, hospitals and clinics with clinical detailing attached, so the
+          prescriber understands the product as well as the buyer does.
+        </p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ QUALITY & COMPLIANCE ============ -->
+<section class="section section--quality" id="quality">
+  <div class="shell">
+    <header class="section__head">
+      <p class="eyebrow reveal">Quality &amp; Compliance</p>
+      <h2 class="section__title reveal" data-delay="1">
+        What a regulator, a hospital and a manufacturer each need to see.
+      </h2>
+      <p class="section__lede reveal" data-delay="2">
+        Distribution is a licensed activity, not a logistics one. These are the obligations we
+        hold ourselves to on every line we carry — and the records we can produce on request.
+      </p>
+    </header>
+
+    <div class="quality">
+      <article class="qual reveal">
+        <span class="qual__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#i-register"/></svg></span>
+        <h3 class="qual__title">Market authorisation</h3>
+        <p class="qual__copy">
+          We hold the National Drug Authority registration for every product we import, and we keep
+          it current. The registration sits with us — not with an agent you cannot reach.
+        </p>
+      </article>
+
+      <article class="qual reveal" data-delay="1">
+        <span class="qual__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#i-cold"/></svg></span>
+        <h3 class="qual__title">Storage &amp; cold chain</h3>
+        <p class="qual__copy">
+          Stock is held under the conditions its dossier specifies, with temperature monitoring and
+          a documented procedure for excursions. Cold chain lines are handled as cold chain lines.
+        </p>
+      </article>
+
+      <article class="qual reveal" data-delay="2">
+        <span class="qual__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#i-trace"/></svg></span>
+        <h3 class="qual__title">Batch traceability</h3>
+        <p class="qual__copy">
+          Every consignment is traceable to batch and expiry — from the manufacturer's release
+          certificate through import clearance to the delivery note signed at your door.
+        </p>
+      </article>
+
+      <article class="qual reveal">
+        <span class="qual__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#i-pv"/></svg></span>
+        <h3 class="qual__title">Pharmacovigilance</h3>
+        <p class="qual__copy">
+          Adverse event reports are captured, investigated and forwarded to both the National Drug
+          Authority and the manufacturer. Reporting is a condition of carrying a product, not a favour.
+        </p>
+      </article>
+
+      <article class="qual reveal" data-delay="1">
+        <span class="qual__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#i-ipc"/></svg></span>
+        <h3 class="qual__title">Complaints &amp; recall</h3>
+        <p class="qual__copy">
+          A product complaint reaches a named person the same working day. Because we hold batch
+          records end to end, a recall can be scoped to the affected consignment rather than the market.
+        </p>
+      </article>
+
+      <article class="qual reveal" data-delay="2">
+        <span class="qual__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#i-doc"/></svg></span>
+        <h3 class="qual__title">Documentation on request</h3>
+        <p class="qual__copy">
+          Certificates of analysis, batch release documents, import permits and storage records —
+          assembled for tender submissions and audits without a three-week wait.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARTNERS ============ -->
+<section class="section section--partners" id="partners">
+  <div class="shell">
+    <header class="section__head section__head--split">
+      <div>
+        <p class="eyebrow reveal">Partners</p>
+        <h2 class="section__title reveal" data-delay="1">Two sides of the same obligation.</h2>
+      </div>
+      <p class="section__lede reveal" data-delay="2">
+        A manufacturer needs someone accountable inside the market. A hospital needs supply it can
+        plan a year around. We are the same company to both.
+      </p>
+    </header>
+
+    <div class="panels">
+      <article class="panel reveal">
+        <span class="panel__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#i-source"/></svg></span>
+        <h3 class="panel__title">For manufacturers</h3>
+        <p class="panel__lede">
+          If your product belongs in this market, we will tell you honestly — and if it does, we
+          will carry it properly.
+        </p>
+        <ul class="panel__list" role="list">
+          <li>A registration holder accountable in-market, under Ugandan law</li>
+          <li>Dossier preparation and National Drug Authority submission</li>
+          <li>Import permits, customs clearance and release</li>
+          <li>Clinical detailing to the prescribers who decide</li>
+          <li>Market feedback and pharmacovigilance reporting back to you</li>
+        </ul>
+        <a class="panel__cta" href="#contact">
+          Discuss a partnership
+          <svg viewBox="0 0 48 48" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </article>
+
+      <article class="panel reveal" data-delay="1">
+        <span class="panel__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#i-hospital"/></svg></span>
+        <h3 class="panel__title">For hospitals &amp; pharmacies</h3>
+        <p class="panel__lede">
+          You should not have to choose between a product you trust and a supplier who turns up.
+        </p>
+        <ul class="panel__list" role="list">
+          <li>Registered products, with the documentation already attached</li>
+          <li>Planned lead times you can build a procurement cycle around</li>
+          <li>Clinical detailing and product training for your team</li>
+          <li>Batch and expiry traceable on every delivery</li>
+          <li>One accountable contact — not a call centre</li>
+        </ul>
+        <a class="panel__cta" href="#contact">
+          Request supply terms
+          <svg viewBox="0 0 48 48" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section section--about" id="about">
+  <div class="shell about">
+    <div class="about__copy">
+      <p class="eyebrow reveal">About</p>
+      <h2 class="section__title reveal" data-delay="1">A Ugandan company, built for the decade ahead.</h2>
+      <p class="about__text reveal" data-delay="2">
+        ASAP MedCare Uganda Limited was founded in 2020 in Kampala to do one thing properly: bring
+        products into this market because a clinical need justifies them. We work with
+        manufacturers who want a partner accountable for registration and reputation, and with
+        hospitals and pharmacies who need supply they can plan around.
+      </p>
+      <p class="about__text reveal" data-delay="3">
+        Five therapeutic verticals are in active development, each with its own evidence file,
+        regulatory path and detailing plan. We would rather hold a short, defensible portfolio than
+        a long, borrowed one.
+      </p>
+      <a class="btn btn--primary reveal" data-delay="4" href="#contact">Start a conversation</a>
+    </div>
+    <ul class="facts reveal" data-delay="2" role="list">
+      <li class="fact"><span class="fact__k">Incorporated</span><span class="fact__v">2020, Kampala</span></li>
+      <li class="fact"><span class="fact__k">Focus</span><span class="fact__v">Pharma, devices &amp; consumer health</span></li>
+      <li class="fact"><span class="fact__k">Regulator</span><span class="fact__v">National Drug Authority, Uganda</span></li>
+      <li class="fact"><span class="fact__k">Reach</span><span class="fact__v">Uganda today, East Africa next</span></li>
+      <li class="fact"><span class="fact__k">Partners</span><span class="fact__v">Manufacturers, hospitals, pharmacy chains</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section section--faq" id="faq">
+  <div class="shell faq">
+    <header class="faq__head">
+      <p class="eyebrow reveal">Questions</p>
+      <h2 class="section__title reveal" data-delay="1">Asked before every first order.</h2>
+      <p class="section__lede reveal" data-delay="2">
+        If your procurement team needs something not covered here, ask us directly — a vague answer
+        at this stage is a problem later.
+      </p>
+    </header>
+
+    <div class="faq__list reveal" data-delay="1">
+      <details class="qa">
+        <summary class="qa__q">Are your products registered with the National Drug Authority?<span class="qa__mark" aria-hidden="true"></span></summary>
+        <div class="qa__a"><p>
+          Yes. We do not supply a pharmaceutical product into the Ugandan market before its
+          registration is in place, and we hold that registration ourselves. Where a product is
+          mid-registration we will say so plainly and give you the expected timeline rather than
+          an optimistic one.
+        </p></div>
+      </details>
+
+      <details class="qa">
+        <summary class="qa__q">Can you provide documentation for a tender submission?<span class="qa__mark" aria-hidden="true"></span></summary>
+        <div class="qa__a"><p>
+          Certificates of analysis, batch release documentation, import permits, registration
+          certificates and storage records. Tell us the tender deadline when you ask — assembling a
+          complete pack takes us days, not weeks, but it is not instant.
+        </p></div>
+      </details>
+
+      <details class="qa">
+        <summary class="qa__q">What are your lead times?<span class="qa__mark" aria-hidden="true"></span></summary>
+        <div class="qa__a"><p>
+          Lines held in stock in Kampala ship on the normal delivery cycle. Products ordered against
+          a forecast depend on the manufacturer's production and shipping schedule, and we will give
+          you that date in writing before you commit. We would rather quote a longer date and meet it.
+        </p></div>
+      </details>
+
+      <details class="qa">
+        <summary class="qa__q">Do you handle cold chain products?<span class="qa__mark" aria-hidden="true"></span></summary>
+        <div class="qa__a"><p>
+          Yes, under monitored conditions with documented excursion handling. If a consignment
+          breaches its temperature range in transit, it does not get quietly delivered — it is
+          quarantined and investigated.
+        </p></div>
+      </details>
+
+      <details class="qa">
+        <summary class="qa__q">Do you supply outside Kampala?<span class="qa__mark" aria-hidden="true"></span></summary>
+        <div class="qa__a"><p>
+          We supply across Uganda, with delivery frequency to upcountry facilities agreed as part of
+          the supply terms rather than promised in general. Regional East African supply is being
+          built deliberately, market by market, as registrations allow.
+        </p></div>
+      </details>
+
+      <details class="qa">
+        <summary class="qa__q">We are a manufacturer. What do you need from us to start?<span class="qa__mark" aria-hidden="true"></span></summary>
+        <div class="qa__a"><p>
+          The product dossier, your GMP certification and manufacturing licence, available clinical
+          and comparator data, and an indication of supply capacity. We review before we discuss
+          commercial terms, because the evidence decides whether there are terms to discuss.
+        </p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section section--contact" id="contact">
+  <div class="shell contact">
+    <div class="contact__copy">
+      <p class="eyebrow eyebrow--light reveal">Contact</p>
+      <h2 class="contact__title reveal" data-delay="1">Sourcing for Uganda? Let’s talk.</h2>
+      <p class="contact__lede reveal" data-delay="2">
+        Whether you manufacture a product that belongs in this market, run a hospital that needs
+        dependable supply, or operate a pharmacy network looking for a differentiated line — start
+        here. We reply to every serious enquiry.
+      </p>
+      <ul class="contact__who reveal" data-delay="3" role="list">
+        <li>Manufacturers seeking a Ugandan registration holder</li>
+        <li>Hospitals &amp; clinical procurement teams</li>
+        <li>Pharmacy and wholesale partners</li>
+      </ul>
+      <ul class="contact__direct reveal" data-delay="3" role="list">
+        <li><a href="mailto:sales@asapmedcare.co.ug">sales@asapmedcare.co.ug</a></li>
+        <li><a href="tel:+256743577838">+256 743 577 838</a></li>
+      </ul>
+    </div>
+
+    <div class="contact__form-wrap reveal" data-delay="2">
+      <form class="form" id="enquiry-form" name="enquiry" method="POST"
+            data-netlify="true" netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="enquiry">
+        <p class="hp" aria-hidden="true">
+          <label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+        </p>
+        <p class="form__title">Send an enquiry</p>
+
+        <div class="form__row">
+          <div class="field">
+            <label for="f-name">Name <span aria-hidden="true">*</span></label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required
+                   aria-describedby="e-name">
+            <p class="field__error" id="e-name" hidden>Please tell us your name.</p>
+          </div>
+          <div class="field">
+            <label for="f-org">Organisation</label>
+            <input id="f-org" name="organisation" type="text" autocomplete="organization">
+          </div>
+        </div>
+
+        <div class="form__row">
+          <div class="field">
+            <label for="f-email">Email <span aria-hidden="true">*</span></label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required
+                   aria-describedby="e-email">
+            <p class="field__error" id="e-email" hidden>Please enter a valid email address.</p>
+          </div>
+          <div class="field">
+            <label for="f-phone">Phone</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="+256 …">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="f-interest">I am interested in</label>
+          <select id="f-interest" name="interest">
+            <option value="">Select an area</option>
+            <option>Gastroenterology — H. pylori &amp; GI</option>
+            <option>Non-Communicable Disease</option>
+            <option>Women’s Health</option>
+            <option>Infection Prevention &amp; Control</option>
+            <option>Neonatal Care</option>
+            <option>Consumer Healthcare</option>
+            <option>Manufacturer partnership</option>
+            <option>Hospital or pharmacy supply</option>
+            <option>Something else</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="f-message">Message <span aria-hidden="true">*</span></label>
+          <textarea id="f-message" name="message" rows="4" required aria-describedby="e-message"
+                    placeholder="Tell us about the product, the need, or the volumes involved."></textarea>
+          <p class="field__error" id="e-message" hidden>Please add a short message.</p>
+        </div>
+
+        <div class="field field--consent">
+          <input id="f-consent" name="consent" type="checkbox" required aria-describedby="e-consent">
+          <label for="f-consent">
+            I consent to ASAP MedCare Uganda Limited storing the details above in order to respond
+            to this enquiry. We do not share them with third parties.
+          </label>
+          <p class="field__error" id="e-consent" hidden>Please confirm your consent so we can reply.</p>
+        </div>
+
+        <button class="btn btn--teal btn--block" type="submit">Send Enquiry</button>
+        <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="shell footer__inner">
+    <div class="footer__brand">
+      <a class="brand brand--footer" href="#top" aria-label="ASAP MedCare — back to top">
+        <svg class="brand__mark" viewBox="0 0 200 150" aria-hidden="true" focusable="false">
+          <defs><mask id="markFooter">
+            <rect width="200" height="150" fill="#fff"/>
+            <rect x="26" y="96" width="44" height="10" fill="#000"/>
+            <rect x="130" y="96" width="44" height="10" fill="#000"/>
+          </mask></defs>
+          <g mask="url(#markFooter)">
+            <path class="m-navy" d="M100 4 L192 150 L144 150 L100 62 L56 150 L8 150 Z"/>
+            <path class="m-navy" d="M100 76 L113 128 L87 128 Z"/>
+          </g>
+          <path class="m-teal" d="M0 150 L100 76 L200 150 L156 150 L100 106 L44 150 Z"/>
+        </svg>
+        <span class="brand__rule" aria-hidden="true"></span>
+        <span class="brand__word">
+          <span class="brand__word-top">ASAP</span>
+          <span class="brand__word-bot">MedCare</span>
+        </span>
+      </a>
+      <p class="footer__tag">
+        Pharmaceuticals, medical devices and consumer healthcare for Uganda and East Africa.
+      </p>
+    </div>
+
+    <div class="footer__col">
+      <h2 class="footer__h">Office</h2>
+      <address class="footer__addr">
+        ASAP MedCare Uganda Limited<br>
+        Plot 2026, Block 122<br>
+        Kasangati, Wakiso<br>
+        Uganda
+      </address>
+    </div>
+
+    <div class="footer__col">
+      <h2 class="footer__h">Contact</h2>
+      <ul role="list" class="footer__list">
+        <li>
+          <span class="footer__dept">Partnerships &amp; supply</span>
+          <a href="mailto:sales@asapmedcare.co.ug">sales@asapmedcare.co.ug</a>
+        </li>
+        <li>
+          <span class="footer__dept">General &amp; administration</span>
+          <a href="mailto:admin@asapmedcare.co.ug">admin@asapmedcare.co.ug</a>
+        </li>
+        <li>
+          <span class="footer__dept">Accounts &amp; billing</span>
+          <a href="mailto:accounts@asapmedcare.co.ug">accounts@asapmedcare.co.ug</a>
+        </li>
+        <li><a href="tel:+256743577838">Tel +256 743 577 838</a></li>
+        <li><a href="https://wa.me/256743577838" rel="noopener">WhatsApp +256 743 577 838</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h2 class="footer__h">Navigate</h2>
+      <ul role="list" class="footer__list">
+        <li><a href="#areas">Therapeutic Areas</a></li>
+        <li><a href="#process">How We Work</a></li>
+        <li><a href="#quality">Quality &amp; Compliance</a></li>
+        <li><a href="#partners">Partners</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#faq">Questions</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="shell footer__base">
+    <p>&copy; <span data-year>2026</span> ASAP MedCare Uganda Limited. All rights reserved.</p>
+    <p class="footer__nda">
+      Licensed and operating under National Drug Authority (Uganda) regulation.
+      NDA registration details available on request.
+    </p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

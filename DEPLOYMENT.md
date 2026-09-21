@@ -7,7 +7,7 @@ Final architecture, in the order it must be executed.
 | Layer | Provider | Cost | Why |
 | --- | --- | --- | --- |
 | Domain `asapmedcare.co.ug` | Truehost | $29.99/yr | Registered 20 Sept 2026 |
-| DNS | Truehost (bundled) | Included | Already paid for; no nameserver change, no propagation wait |
+| DNS | Cloudflare | Free | Truehost's bundled DNS returned SERVFAIL — no zone was ever created |
 | Site | Netlify | Free | Already have it; `netlify.toml` is committed |
 | Email (1 mailbox + 3 aliases) | Zoho Mail Lite | ~$12/yr | Free tier is webmail-only — unusable on a phone |
 
@@ -53,20 +53,36 @@ deploy, so rollback is one click.
 Pull requests get their own preview URL automatically, so changes can be reviewed on a
 real URL before they reach the live site.
 
-### 3. DNS records — Truehost
+### 3. DNS — Cloudflare
 
-**Domains → My Domains → asapmedcare.co.ug → Manage DNS**
+Truehost activated the domain but never created a DNS zone on its nameservers, so the
+domain resolved SERVFAIL (delegated, but nothing answering). Cloudflare creates a real
+zone immediately. Truehost remains the registrar; only DNS moves.
 
-| Type | Host | Value |
-| --- | --- | --- |
-| CNAME | `www` | `<site>.netlify.app` |
-| A | `@` | `75.2.60.5` |
+1. dash.cloudflare.com → **Add a site** → `asapmedcare.co.ug` → **Free** plan.
+2. Copy the two nameservers Cloudflare issues.
+3. Truehost → **Domains → asapmedcare.co.ug → Nameservers** → custom → paste both.
+4. Add the records below in Cloudflare.
 
-Truehost's DNS does not offer ALIAS/ANAME at the apex, so the A record is the correct
-choice there. `75.2.60.5` is Netlify's documented apex load balancer.
+| Type | Name | Content | Proxy | Priority |
+| --- | --- | --- | --- | --- |
+| CNAME | `www` | `asapmedcare.netlify.app` | **DNS only** | — |
+| CNAME | `@` | `apex-loadbalancer.netlify.com` | **DNS only** | — |
+| TXT | `@` | `zoho-verification=zb71272922.zmverify.zoho.com` | — | — |
+| MX | `@` | `mx.zoho.com` | — | 10 |
+| MX | `@` | `mx2.zoho.com` | — | 20 |
+| MX | `@` | `mx3.zoho.com` | — | 50 |
+| TXT | `@` | `v=spf1 include:zoho.com ~all` | — | — |
+| TXT | `_dmarc` | `v=DMARC1; p=none; rua=mailto:charles@asapmedcare.co.ug` | — | — |
 
-Nameservers stay with Truehost, so there is no 24–48h propagation wait — only the
-record TTL, usually minutes.
+Plus the DKIM TXT that Zoho generates later (Admin Console → Email Configuration → DKIM).
+
+**The proxy must be OFF (grey cloud) on both Netlify records.** Cloudflare defaults new
+A/CNAME records to proxied (orange). Proxying in front of Netlify breaks Let's Encrypt
+provisioning and stacks two CDNs. Cloudflare is doing DNS here, not proxying.
+
+Cloudflare flattens the apex CNAME automatically, so no hardcoded IP is needed. If it
+rejects the apex CNAME, fall back to `A @ → 75.2.60.5`.
 
 ### 4. Custom domain — Netlify
 - Domain management → add `www.asapmedcare.co.ug` and set it as the **primary** domain.

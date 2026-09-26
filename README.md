@@ -1,4 +1,4 @@
-# ASAP MedCare Uganda Limited — website
+# ASAP MedCare (U) Ltd — website
 
 Single-page, production-ready marketing site. No build step, no dependencies, no framework.
 

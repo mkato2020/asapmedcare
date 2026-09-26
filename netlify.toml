@@ -40,3 +40,19 @@
   for = "/index.html"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
+
+# ---- Branded short links ----
+# Share asapmedcare.co.ug/google instead of a 400-character Google URL.
+# Targets can be changed here without reprinting anything.
+
+[[redirects]]
+  from = "/google"
+  to = "https://www.google.com/search?q=ASAP+MedCare+(U)+Ltd&stick=H4sIAAAAAAAA_-NgU1I1qDA0N09JMjS3NEw2M7YwMzS3MqhINElLTTMxNUuySDE0NUxNXMQq4hjsGKDgm5rinFiUqqARqqngU5ICAHv2BHhAAAAA"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/whatsapp"
+  to = "https://wa.me/256743577838"
+  status = 302
+  force = true
